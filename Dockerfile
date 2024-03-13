@@ -24,7 +24,7 @@ WORKDIR /app
 #
 COPY . /app
 #RUN ./mvnw clean package
-COPY target/seniormeet.jar app.jar
+COPY target/seniormeet-0.0.1.jar app.jar
 
 ###RUN mvn clean clean
 CMD ["java", "-jar", "target/app.jar"]
