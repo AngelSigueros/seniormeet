@@ -39,7 +39,7 @@ COPY src /home/springboot/code
 # Change working directory
 WORKDIR /home/springboot/code
 # Install Maven dependency
-RUN apt update && apt upgrade -y && apt install maven -y
+#RUN apt update && apt upgrade -y && apt install maven -y
 # Build the Spring Boot application
 RUN mvn clean install
 # Expose default Tomcat port
