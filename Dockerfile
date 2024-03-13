@@ -32,7 +32,7 @@
 #ENV MYSQL_ROOT_PASSWORD admin
 #ENV MYSQL_DATABASE senior_meet_db
 
-FROM adoptopenjdk/openjdk17:latest AS builder
+FROM adoptopenjdk/openjdk21:latest AS builder
 # Copy source code
 COPY src /home/springboot/code
 # Change working directory
