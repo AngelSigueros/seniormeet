@@ -28,7 +28,7 @@
 ####RUN mvn clean clean
 #CMD ["java", "-jar", "target/app.jar"]
 
-FROM temurin:21-jre-alpine
+FROM openjdk:21
 COPY target/seniormeet-0.0.1.jar seniormeet-0.0.1.jar
 ENTRYPOINT ["java","-jar","/seniormeet-0.0.1.jar"]
 
