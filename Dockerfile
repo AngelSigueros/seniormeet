@@ -32,7 +32,8 @@
 #ENV MYSQL_ROOT_PASSWORD admin
 #ENV MYSQL_DATABASE senior_meet_db
 
-FROM adoptopenjdk/openjdk21:latest AS builder
+#FROM adoptopenjdk/openjdk21:latest AS builder
+FROM bjdelacruz/amazoncorretto-20.0.1-gradle-8.2.1
 # Copy source code
 COPY src /home/springboot/code
 # Change working directory
