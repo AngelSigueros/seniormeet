@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "application.title",
+      "type": "java.lang.String",
+      "description": "Red Social para mayores."
+  }
+] }
