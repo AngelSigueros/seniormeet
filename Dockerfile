@@ -1,3 +1,13 @@
+FROM maven:3.8.3-openjdk-17 AS build
+COPY src /home/app/src
+COPY pom.xml /home/app
+#COPY . .
+RUN mvn -f /home/app/pom.xml clean package
+COPY target/seniormeet-0.0.1.jar seniormeet-0.0.1.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/seniormeet-0.0.1.jar"]
+
+
 #FROM eclipse-temurin:21-jdk-jammy
 #WORKDIR /app
 #COPY .mvn/ .mvn
@@ -28,9 +38,9 @@
 ####RUN mvn clean clean
 #CMD ["java", "-jar", "target/app.jar"]
 
-FROM openjdk:21
-COPY target/seniormeet-0.0.1.jar seniormeet-0.0.1.jar
-ENTRYPOINT ["java","-jar","/seniormeet-0.0.1.jar"]
+#FROM openjdk:21
+#COPY target/seniormeet-0.0.1.jar seniormeet-0.0.1.jar
+#ENTRYPOINT ["java","-jar","/seniormeet-0.0.1.jar"]
 
 #FROM mysql:8.0
 #ENV MYSQL_ROOT_PASSWORD admin
