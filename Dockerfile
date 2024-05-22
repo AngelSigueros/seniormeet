@@ -3,9 +3,9 @@ COPY src /home/app/src
 COPY pom.xml /home/app
 #COPY . .
 RUN mvn -f /home/app/pom.xml clean package
-COPY target/seniormeet-0.0.1.jar seniormeet-0.0.1.jar
+COPY target/seniormeet.jar seniormeet.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/seniormeet-0.0.1.jar"]
+ENTRYPOINT ["java","-jar","/seniormeet.jar"]
 
 
 #FROM eclipse-temurin:21-jdk-jammy
